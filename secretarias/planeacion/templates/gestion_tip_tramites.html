@@ -5,68 +5,63 @@
 <!--import vali_new_tramite.js-->
 <script src="../static/js/vali_new_tramite.js"></script>
 
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card  text-black" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
 
-            <div class="mb-md-5 mt-md-4 pb-1">
+      <div class="container py-5 h-100">
 
-                <h1 class="fw-bold mb-2 text-uppercase">Crear un tipo de tramite</h1>
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card  text-black" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
 
-                <!--form nombre_tramite,responsable_tramite,descripcion_tramite-->
-                <form id="form_new_tramite" action="/register_tip_tramite" method="POST" > {%csrf_token%}
-                     
-                    <div class="form-outline form-white mb-4">
-                        <input type="text" id="nombre_tramite" name="nombre_tramite" placeholder="nombre tramite"  class="form-control form-control-lg" />
-                        <label class="form-label" for="nombre_tramite">Nombre del tramite</label>
-                    </div>
+                <!--crear dos columnas bootstrap html-->
+                
 
-                    <div class="form-outline form-white mb-4">
-                        <input type="text" id="responsable_tramite" name="responsable_tramite" placeholder="responsable tramite" class="form-control form-control-lg" />
-                        <label class="form-label" for="responsable_tramite">Responsable del tramite</label>
-                    </div>
 
-                    <div class="form-outline form-white mb-4">
-                        <input type="text" id="descripcion_tramite" name="descripcion_tramite" placeholder="descripción tramite" class="form-control form-control-lg" />
-                        <label class="form-label" for="descripcion_tramite">Descripcion tramite</label>
-                    </div>
+                <div class="mb-md-5 mt-md-4 pb-1">
 
-                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button id="btn_submit" type="submit" class="btn btn-primary btn-lg">Crear tramite</button>
-                </form>
+                    <!--create button icon house alineado a la izquierda-->
+                    <a href="menu" class="btn btn-outline-dark btn-floating m-1" role="button" aria-pressed="true"><i class="fas fa-home"></i> Regresar</a>          
+              
+                  
+                    <br>
 
-             <!--   
-              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-black-50 mb-5">Please enter your login and password!</p>
+                    <!--clinear un boton con icono a la parte derecha del contenedor-->
 
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">Email</label>
+                    <h1 class="fw-bold mb-2 text-uppercase">Crear un tipo de tramite</h1>
+
+                    <!--form nombre_tramite,responsable_tramite,descripcion_tramite-->
+                    <form id="form_new_tramite" action="/register_tip_tramite" method="POST" > {%csrf_token%}
+                        
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" id="nombre_tramite" name="nombre_tramite" placeholder="nombre tramite"  class="form-control form-control-lg" />
+                            <label class="form-label" for="nombre_tramite">Nombre del tramite</label>
+                        </div>
+
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" id="responsable_tramite" name="responsable_tramite" placeholder="responsable tramite" class="form-control form-control-lg" />
+                            <label class="form-label" for="responsable_tramite">Responsable del tramite</label>
+                        </div>
+
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" id="descripcion_tramite" name="descripcion_tramite" placeholder="descripción tramite" class="form-control form-control-lg" />
+                            <label class="form-label" for="descripcion_tramite">Descripcion tramite</label>
+                        </div>
+
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button id="btn_submit" type="submit" class="btn btn-primary btn-lg">Crear tramite</button>
+                          
+                            <!--crear dos columnas html-->
+                            
+                          </div>
+
+                    </form>
+
               </div>
-
-              <div class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Password</label>
-              </div>
-
-              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-
-              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-
-
-            </div>-->
-
-
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-     
+
     
 
 

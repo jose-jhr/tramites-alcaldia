@@ -1,0 +1,100 @@
+{%extends "./base.html"%}
+
+{%block body%}
+
+<script src="../static/js/validate_add_tramite.js"></script>
+
+<div class="container py-5 h-100" >
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="card  text-black" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <!--crear dos columnas bootstrap html-->
+          
+            <div class="mb-md-2 mt-md-2 pb-4">
+
+                <!--create button icon house alineado a la izquierda-->
+                <a href="menu" class="btn btn-outline-dark btn-floating m-1" role="button" aria-pressed="true"><i class="fas fa-home"></i> Regresar</a>          
+        
+                <br>
+                <!--clinear un boton con icono a la parte derecha del contenedor-->
+
+                <h1 class="fw-bold mb-2 text-uppercase">Agregar tramite</h1>
+
+                <!--form nombre_tramite,responsable_tramite,descripcion_tramite-->
+                <form id="form_tramit" action="/register_tramite" method="POST" > {%csrf_token%}
+
+                    <select id="select_tip_tramit" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona tramite a diligenciar</option>
+                        {% for c in tipo_tramites %}
+                        <option value="{{c.id_tramite}}">{{c.nombre_tramite}}</option>
+                        {% endfor %}
+                      </select>
+                      <br>
+
+
+                    <div class="form-outline form-white mb-1">
+                        <input type="text" id="nombre_tramite_sec" name="nombre_tramite_sec" placeholder="nombre tramite"  class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-1">
+                      <input type="text" id="nombre_solic" name="nombre_solic" placeholder="nombre solicitante"  class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-1">
+                      <input type="number" id="num_ide_solic" name="num_ide_solic" placeholder="numero de identificación"  class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-1">
+                      <input type="text" id="contacto_solic" name="contacto_solic" placeholder="contacto solicitante"  class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-1">
+                      <input type="text" id="correo_solic" name="correo_solic" placeholder="correo electrónico"  class="form-control form-control-lg" />
+                    </div>
+
+                    <!--add text select fecha and input type date-->
+                    <div class="form-outline form-white mb-1">
+                      <input type="date" id="fecha_solic" name="fecha_solic" placeholder="fecha solicitud"  class="form-control form-control-lg" />
+                      <label class="form-label" for="fecha_solic">Fecha solicitud</label>
+                    </div>
+
+                    <select id="state_solicitud" class="form-select" aria-label="Default select example">
+                      <option value = "0" selected>Selecciona estado solicitud</option>
+                      <option value="en proceso">en proceso</option>
+                      <option value="finalizado">finalizado</option>
+                    </select>
+
+                    <br>
+
+                    <!--observacion-->
+                    <div class="form-outline form-white mb-1">
+                      <textarea class="form-control" id="observacion" name="observacion" rows="3" placeholder="observacion"></textarea>
+                    </div>
+
+                    <!--upload file -->
+                    <div class="form-outline form-white mb-1">
+                      <input class="form-control" type="file" id="formFile" multiple/>
+                    </div>
+
+                    
+
+                    <br>
+
+                    <!--add button submit-->
+                    <button type="submit" class="btn btn-outline-dark btn-lg px-5 btn-primary text-bg-primary">Agregar</button>
+
+                </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+{%endblock%}

@@ -20,18 +20,77 @@
     <link rel="stylesheet" href="../static/css/gradient.css">
 
 </head>
-<body>
+<!--body class vh-100 gradient-custom-->
+
+<body class="vh-100 gradient-custom">
     
-    <section class="vh-100 gradient-custom">
+    <section >
 
 
          {% block body %}
 
-
+          
 
          {% endblock %}
 
     </section>
+
+
+    <style>
+
+table {
+  background-color: white;
+    }
+
+    </style>
+
+
+    <section>
+
+        <div class="container">
+
+            <table class="table mx-auto" >
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Género</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>30</td>
+                    <td>Hombre</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Ana</td>
+                    <td>García</td>
+                    <td>25</td>
+                    <td>Mujer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Pedro</td>
+                    <td>Rodríguez</td>
+                    <td>35</td>
+                    <td>Hombre</td>
+                  </tr>
+                </tbody>
+              </table>
+    
+
+
+        </div>
+
+        
+    </section>
+
 
 </header>
 
